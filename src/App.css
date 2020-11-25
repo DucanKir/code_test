@@ -1,5 +1,43 @@
+
 .App {
-  text-align: center;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  width: 15%;
+  height: 100%;
+  background-color: rgb(3, 194, 252);
+  color: white;
+}
+
+.profile{
+  padding: 30px;
+  width: 85%;
+  position: relative;
+}
+
+.search{
+  width: 100%;
+}
+
+.tabs{
+  display: flex;
+}
+
+.tab {
+  margin: 10px;
+}
+
+.addingAct {
+  background-color: white;
+  border: 1px solid black;
+  width: 300px;
+  height: 200px;
 }
 
 .App-logo {
@@ -36,3 +74,5 @@
     transform: rotate(360deg);
   }
 }
+
+

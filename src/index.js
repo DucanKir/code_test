@@ -3,11 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import addNote from './actions/addNote'
+import addTask from './actions/addTask'
+import addEnquiry from './actions/addEnquiry'
 
+import {createStore} from 'redux';
+import allReducers from './reducers';
+import {Provider} from 'react-redux';
+
+
+let store = createStore(allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
+store.dispatch(addEnquiry('gfhjdsdj'))
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
