@@ -4,10 +4,11 @@ const addingActivity = (state = "hide", action) => {
       case "ADD_ACTIVITY":
         return "show";
       case "ADDED":
-        return "close";
+        return "hide";
       default:
-        return "close";
+        return "hide";
     }
   }
 
 export default addingActivity
+

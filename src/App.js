@@ -5,7 +5,7 @@ import addNote from './actions/addNote';
 import addEnquiry from './actions/addEnquiry';
 import newActivity from './actions/newActivity';
 import addTask from './actions/addTask';
-import addActivity from './actions/addTask';
+import addActivity from './actions/addActivity';
 import {chooseActivityTab, chooseDocumentsTab, chooseStatsTab} from './actions/chooseTab';
 
 function App() {
@@ -17,8 +17,8 @@ function App() {
   const newNote = useSelector(state => state.newNote);
   
 
+
   const dispatch = useDispatch();
-  console.log(addingActivity)
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -29,14 +29,14 @@ function App() {
   return (
     <div className="App">
       <div className="sidebar">
-        <p>PERCHPEEK</p>
-        <p>Overview</p>
-        <h3>MANAGE</h3>
+        <p className="title">PERCHPEEK</p>
+        <p className="underline">Overview</p>
+        <h3 className="category">MANAGE</h3>
         <p>Users</p>
         <p>Properties</p>
         <p>Viewings</p>
-        <p>Support</p>
-        <h3>GET HELP</h3>
+        <p className="underline">Support</p>
+        <h3 className="category">GET HELP</h3>
         <p>Knowledge Base</p>
       </div>
       <div className="profile">
@@ -44,6 +44,11 @@ function App() {
         minlength="4" maxlength="8" size="50" />
         <div className="user">
           <h2 className="username">John Doe</h2>
+          <div className='about'>
+            <div className='avatar'>
+            </div>
+            <p>Moving to <a>London, UK</a> </p>
+          </div>
         </div>
         <div className="info">
           <div className="tabs">
@@ -56,21 +61,25 @@ function App() {
              { tabs == 'documents' || tabs == 'stats' ? "Data not available" : 
              <div>
                <button onClick={() => dispatch(addActivity())}>Add New Activity</button>
-               {allActivities.map(act => <p> {act}</p>)}
-
-               <div className="addingAct">
-               <form onSubmit={(event) => handleSubmit(event)}>
-                <select name="type" id="type">
-                    <option value="notes">Notes</option>
-                    <option value="tasks">Tasks</option>
-                    <option value="enquiriues">Enquiriues</option>
-                  </select><br />
-                  <label for="link">URL</label><br />
-                  <input type="text" id="fname" name="fname" /><br />
-                  <label for="notes">Add Notes</label><br />
-                  <input type="textfield" id="notes" name="notes" />
-                  <button type="submit"> submit </button>
-                </form>
+               <div className="activitiesList">
+                {allActivities.map(act => <p className="action">John Doe created {act}</p>)}
+              </div>
+               <div className="addingAct" style={addingActivity == 'show' ? {display: 'flex'} : {display: 'none'}}>
+                 <div className='formContainer'>
+                  <form onSubmit={(event) => handleSubmit(event)}>
+                    <h2>Add Note</h2>
+                    <select name="type" id="type">
+                        <option value="notes">Notes</option>
+                        <option value="tasks">Tasks</option>
+                        <option value="enquiriues">Enquiriues</option>
+                      </select><br />
+                      <label for="link">URL</label><br />
+                      <input className='input'type="text" id="fname" name="fname" /><br />
+                      <label for="notes">Add Notes</label><br />
+                      <textarea cols="37" rows="5" className='input'type="text"  id="notes" name="notes" />
+                      <button className="submitButton"type="submit"> submit </button>
+                    </form>
+                  </div>
                </div>
             </div>
           

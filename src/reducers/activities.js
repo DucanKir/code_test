@@ -2,19 +2,19 @@
 //key is an id, value is a note
 const dummyData = {
     notes: {
-        1: "note 1",
-        2: 'note 2',
-        3: 'note 3'
+        1: "Note number one",
+        2: 'Note number two',
+        3: 'Note number three'
     },
     tasks: {
-        1: "task 1",
-        2: 'task 2',
-        3: 'task 3'
+        1: "Task number one",
+        2: 'Task number two',
+        3: 'Task number three'
       },
     enquiries: {
-        1: "enquiry 1",
-        2: 'enquiry 2',
-        3: 'enquiry 3'
+        1: "Enquiry number one",
+        2: 'Enquiry number two',
+        3: 'Enquiry number three'
       }
     
 }

@@ -4,8 +4,9 @@ const addingActivity = (state = '', action) => {
       case "NEW_ACTIVITY":
         return state;
       default:
-        return "";
+        return '';
     }
   }
 
 export default addingActivity
+

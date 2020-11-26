@@ -1,4 +1,5 @@
 const addActivity = () => {
+
     return {
       type: 'ADD_ACTIVITY',
     }

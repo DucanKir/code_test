@@ -1,14 +1,18 @@
+body{
+  position: relative;
+}
 
 .App {
   display: flex;
   width: 100vw;
   height: 100vh;
+
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  padding: 0 30px;
   width: 15%;
   height: 100%;
   background-color: rgb(3, 194, 252);
@@ -18,7 +22,41 @@
 .profile{
   padding: 30px;
   width: 85%;
-  position: relative;
+  
+}
+p{
+  padding-bottom: 0;
+}
+
+.category {
+  color: rgb(230, 244, 255);
+  font-weight: 200;
+  font-size: 18px;;
+}
+
+.activitiesList{
+  border: 1px solid lightgrey;
+  margin: 20px 0;
+  border-radius: 1%;
+}
+
+.action{
+  border-bottom: 1px solid lightgrey;
+  padding: 10px;
+  margin: 0;
+}
+
+.underline{
+  border-bottom: 1px solid white;
+  padding-bottom: 30px;
+
+}
+
+.title {
+  text-align: center;
+  border-bottom: 1px solid white;
+  padding: 20px;
+  font-size: 20px;
 }
 
 .search{
@@ -27,17 +65,78 @@
 
 .tabs{
   display: flex;
+  margin-bottom: 20px;
 }
 
 .tab {
   margin: 10px;
+  background-color: transparent;
+  border: none;
+  color: grey;
+  padding-bottom: 10px;
+}
+
+.tab:focus{
+  border-bottom: 1px solid greenyellow;
+  
+  outline: none;
+  color: black;
+
+}
+.formContainer{
+  padding: 15px;
+  background-color: white;
+  width: 30%;
+  height: 40%;
+
+
 }
 
 .addingAct {
-  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
   border: 1px solid black;
-  width: 300px;
-  height: 200px;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+select {
+  width: 100%;
+}
+
+
+.submitButton{
+  margin-top: 20px;
+}
+
+.about {
+  width: 100%;
+  display: flex;
+}
+
+label{
+  margin-top: 50px;;
+}
+
+select {
+  margin-bottom: 20px;
+}
+
+.user {
+  width: 100%;
+}
+.avatar {
+  background-image: url('https://i.imgur.com/7XXThSF.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50px;
+  width: 50px;
+
 }
 
 .App-logo {
