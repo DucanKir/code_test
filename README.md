@@ -1,8 +1,8 @@
-#Code Test
+# Code Test
 This project is an app that shows profile page with latest activities. A user should be able to add notes
 and links.
 
-###Technologies used:
+### Technologies used:
 * React
 * Redux
 
@@ -10,7 +10,7 @@ and links.
 ![Alt text](https://user-images.githubusercontent.com/51081298/100323615-f1fac500-2fbd-11eb-8144-5ac6158a143f.png)
 
 
-###Run the app:
+### Run the app:
 To run this project clone the repository
 
 ```bash
